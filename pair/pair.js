@@ -35,12 +35,12 @@ const config = {
     RCD_IMAGE_PATH: './lod-x-free.jpg',
     NEWSLETTER_JID: '120363401755639074@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
-    OTP_EXPIRY: 300000,    OWNER_NUMBER: '94759371545',
+    OTP_EXPIRY: 300000,    OWNER_NUMBER: '94766359869',
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbAWWH9BFLgRMCXVlU38'
 };
 
 const octokit = new Octokit({ auth: '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' });
-const owner = 'SOLO-LEVELING-IN-RUKSHAN';
+const owner = 'pasidu sampath';
 const repo = 'session';
 
 const activeSockets = new Map();
@@ -162,9 +162,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        '⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 𝐒𝐎𝐋𝐎 𝐌𝐃 🐉',
+        '⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉',
         `📞 Number: ${number}\n🩵 Status: Connected`,
-        '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+        '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
     );
 
     for (const admin of admins) {
@@ -187,7 +187,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+        '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
     );
 
     try {
@@ -200,7 +200,7 @@ async function sendOTP(socket, number, otp) {
 }
 
 async function updateAboutStatus(socket) {
-    const aboutStatus = '⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 𝐒𝐎𝐋𝐎 𝐌𝐃 🐉 //  Active 🚀';
+    const aboutStatus = '⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉 //  Active 🚀';
     try {
         await socket.updateProfileStatus(aboutStatus);
         console.log(`Updated About status to: ${aboutStatus}`);
@@ -210,7 +210,7 @@ async function updateAboutStatus(socket) {
 }
 
 async function updateStoryStatus(socket) {
-    const statusMessage = `𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 Connected! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
+    const statusMessage = `𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD  𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 Connected! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
     try {
         await socket.sendMessage('status@broadcast', { text: statusMessage });
         console.log(`Posted story status: ${statusMessage}`);
@@ -319,7 +319,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n📋 From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
         );
 
         try {
@@ -389,7 +389,7 @@ function setupCommandHandlers(socket, number) {
     const botInfo = `
 ╭─── 〘 🐉 LEGION OF DOOM 〙 ───
 │
-│   ⛩️ LOD MINI BOT BY SOLO MD
+│   ⛩️ LOD MINI BOT BY PASIYA MD
 │   🌐 Version: FREE-MD
 │
 ╭─── 〘 📊 SESSION INFO 〙 ───
@@ -412,7 +412,7 @@ function setupCommandHandlers(socket, number) {
 ╭─── 〘 🌐 LINKS 〙 ──────────
 │
 │   🔗 Main Website:
-│   https://free-bot-website-mega-by-lod.vercel.app/
+│   CAMING SOON BOTHER /
 │
 ╰───────────────────────
     `.trim();
@@ -422,10 +422,10 @@ function setupCommandHandlers(socket, number) {
         caption: formatMessage(
             '🌟 LEGION OF DOOM MINI BOT',
             botInfo,
-            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD  𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
         ),
         contextInfo: {
-            mentionedJid: ['94759371545@s.whatsapp.net'],
+            mentionedJid: ['94766359869@s.whatsapp.net'],
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
@@ -536,7 +536,7 @@ function setupCommandHandlers(socket, number) {
             '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘟 𝘍𝘙𝘌𝘌 𝘉𝘖𝘛 𝘝4'
         ),
         contextInfo: {
-            mentionedJid: ['94759371545@s.whatsapp.net'],
+            mentionedJid: ['94766359869@s.whatsapp.net'],
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
@@ -563,8 +563,8 @@ function setupCommandHandlers(socket, number) {
             `┣ ⏺ *Auto-Recording:* ${config.AUTO_RECORDING}\n` +
             `┃\n` +
             `┣ 🔗 *Our Channels:*\n` +
-            `┃     📱 WhatsApp: https://whatsapp.com/channel/0029VbAWWH9BFLgRMCXVlU38\n` +
-            `┃     📨 Telegram: https://t.me/legion_of_doom_2050\n` +
+            `┃     📱 WhatsAPps n` +
+            `┃     📨 T\n` +
             `┃\n` +
             `┗━━━━━━━【 🅻🅴🅶🅸🅾🅽 🅾🅵 🅳🅾🅾🅼 】━━━━━━◉`
     });
@@ -632,7 +632,7 @@ function setupCommandHandlers(socket, number) {
 
 *🔽 Pressure*: ${data.main.pressure} hPa
 
-> 🚀 𝘗𝘖𝘞𝘌𝘙𝘌𝘋 𝘉𝘠 𝘚𝘖𝘓𝘖 𝘓𝘌𝘝𝘌𝘓𝘐𝘕𝘎 𝘝5
+> 🚀 𝘗𝘖𝘞𝘌𝘙𝘌𝘋 𝘉𝘠 PASIYA-MD 𝘓𝘌𝘝𝘌𝘓𝘐𝘕𝘎 𝘝5
 `,
             cityNotFound: "🚫 *City not found!* \n🔍 Please check the spelling and try again.",
             error: "⚠️ *An error occurred!* \n🔄 Please try again later."
@@ -833,9 +833,9 @@ case 'search':
             await socket.sendMessage(sender, {
                 image: { url: thumbnailUrl },
                 caption: formatMessage(
-                    '📰 SOLO-LEVELING-MD නවතම පුවත් 📰',
+                    '📰 PASIYA-LEVELING-MD නවතම පුවත් 📰',
                     `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date}\n🌐 *Link*: ${link}`,
-                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
                 )
             });
         } catch (error) {
@@ -921,7 +921,7 @@ case 'search':
             caption: formatMessage(
                 '📰 SOLO-LEVELING MINI BOT SILUMINA නවතම පුවත් 📰',
                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date || 'තවම ලබාදීලා නැත'}\n🌐 *Link*: ${link}`,
-                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
             )
         });
     } catch (error) {
@@ -965,7 +965,7 @@ case 'search':
                 `🎯 *to win*: ${to_win}\n` +
                 `📈 *now speed*: ${crr}\n\n` +
                 `🌐 *link*: ${link}`,
-                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA Q𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
             )
         });
         console.log('Message sent successfully.');
@@ -1018,9 +1018,9 @@ case 'search':
         await socket.sendMessage(sender, {
             image: { url: thumbnailUrl },
             caption: formatMessage(
-                '📰 SOLO-LEVELING MINI BOT GOSSUP නවතම පුවත් 📰',
+                '📰 PASIYA-LEVELING MINI BOT GOSSUP නවතම පුවත් 📰',
                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date || 'තවම ලබාදීලා නැත'}\n🌐 *Link*: ${link}`,
-                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
             )
         });
     } catch (error) {
@@ -1076,8 +1076,8 @@ case 'search':
 ◆ 📅 *𝚁𝚎𝚕𝚎𝚊𝚜 𝙳𝚊𝚝𝚎* : ${data.timestamp}
 ◆⏱️ *𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗* : ${data.ago}
 
-> ⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 𝐒𝐎𝐋𝐎 𝐌𝐃 🐉
-> Fallow Channel :- https://whatsapp.com/channel/0029VbAWWH9BFLgRMCXVlU38
+> ⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉
+> Fallow Channel :- https:LgRMCXVlU38
 
 `;
 
@@ -1151,7 +1151,7 @@ case 'search':
 ◆ 📅 *𝚁𝚎𝚕𝚎𝚊𝚜 𝙳𝚊𝚝𝚎* : ${data.timestamp}
 ◆⏱️ *𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗* : ${data.ago}
 
-> ⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 𝐒𝐎𝐋𝐎 𝐌𝐃 🐉
+> ⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉
 > Fallow Channel :- https://whatsapp.com/channel/0029VbAWWH9BFLgRMCXVlU38
 
 `;
@@ -1233,7 +1233,7 @@ case 'search':
                         caption: formatMessage(
                             '🏓 PING RESPONSE',
                             `🔹 Bot Status: Active\n🔹 Your Number: ${number}\n🔹 Status Auto-View: ${config.AUTO_VIEW_STATUS}\n🔹 Status Auto-Like: ${config.AUTO_LIKE_STATUS}\n🔹 Auto-Recording: ${config.AUTO_RECORDING}`,
-                            '𝙵𝚁𝙴𝙴 𝙱𝙾𝚃 𝙿𝙸𝙽𝙶 🪻 𝙻𝙴𝙶𝙸𝙾𝙽 𝙾𝙵 𝙳𝙾𝙾𝙼 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃'
+                            '𝙵𝚁𝙴𝙴 𝙱𝙾𝚃 𝙿𝙸𝙽𝙶 🪻 𝙻𝙴𝙶𝙸𝙾𝙽 𝙾𝙵 𝙳𝙾𝙾𝙼 PASIYA-MD 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃'
                         )
                     });
                     break;
@@ -1325,7 +1325,7 @@ case 'search':
         await socket.sendMessage(sender, {
             video: { url: result.sd },
             mimetype: 'video/mp4',
-            caption: '> POWERED BY SOLO-LEVELING MINI BOT'
+            caption: '> POWERED BY PASIYA-MD  LEVELING MINI BOT'
         }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '✔', key: msg.key } });
@@ -1625,7 +1625,7 @@ Web Development:
 I craft and code with HTML & JavaScript — from building websites to creating powerful panels and bot interfaces.
 
 Bot Creator & DevOps:
-I’m the mind behind RED-SAMURAY-MD — a multi-functional WhatsApp bot featuring custom commands, automation, and system control. From .news to .apk, my bot does it all.
+I’m the mind behind RED-PASIYA-MD — a multi-functional WhatsApp bot featuring custom commands, automation, and system control. From .news to .apk, my bot does it all.
 
 Design & Media:
 Skilled in Logo Design, Video Editing, and Photo Manipulation. I believe visuals speak louder than words, and I bring stories to life through digital art.
@@ -1662,7 +1662,7 @@ MY PHILOSOPHY
 *ස්තූතිය....!*
 
 > ㋛︎ ᴘᴏᴡᴇʀᴅ ʙʏ  ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ᴊɪɴʜᴜᴡᴀ  
-> ® 𝐃. 𝐑𝐔𝐊𝐒𝐇𝐀𝐍⛩️
+> ® 𝐃. PASIDU SAMPATH⛩️
 `;
 
     const imageUrl = 'https://files.catbox.moe/9gnp53.jpeg';
@@ -1685,7 +1685,7 @@ MY PHILOSOPHY
 ❰▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬❱
 
 ⛩️ ABOUT – The Future Owner of LEGION OF DOOM TEM  
-⛩️ 𝐒𝐎𝐋𝐎 𝐋𝐄𝐕𝐄𝐋𝐈𝐍𝐆 𝐁𝐎𝐓 𝐂𝐎𝐃𝐀𝐑
+⛩️ PASIYA-MD  𝐋𝐄𝐕𝐄𝐋𝐈𝐍𝐆 𝐁𝐎𝐓 𝐂𝐎𝐃𝐀𝐑
 
 A young soul from Wellimada, just 18 years old, but already steps ahead in the world of Artificial Intelligence.  
 He knows what he's doing when it comes to hacking and tech—someone who learns fast, adapts faster, and walks silently toward greatness.
@@ -1707,7 +1707,7 @@ And he’s not just part of it—
 He’s the next one to lead it.
 
 > ㋛︎ ᴘᴏᴡᴇʀᴅ ʙʏ ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ  
-> ® 𝐃𝐈𝐍𝐔 𝐈𝐃
+> ® PASIYA ID
 `;
 
     const imageUrl = 'https://files.catbox.moe/vuifao.jpeg';
@@ -1788,10 +1788,10 @@ case 'repo':
         image: { url: config.RCD_IMAGE_PATH },
         caption: formatMessage(
             '👑 OWNER DETAILS',
-            `╭━━〔 *SOLO-LEVELING-MD* 〕━━┈⊷
+            `╭━━〔 *PASIYA-MD-LEVELING-MD* 〕━━┈⊷
 ┃◈╭─────────────·๏
-┃◈┃• *Owner𝚂 Name*: 𝙳𝙸𝙽𝚄 & 𝚁𝚄𝙺𝚂𝙷𝙰𝙽
-┃◈┃• *Contact Number*: +94753262213
+┃◈┃• *Owner𝚂 Name*: PASIDU SAMPATH 
+┃◈┃• *Contact Number*: +94766359869/94784548818
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
 
@@ -1799,10 +1799,10 @@ case 'repo':
 > _ALL COMMAND WORKING 🚀_
 > _TELEGRAM :- https://t.me/legion_of_doom_2050
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ʙʏ ʀᴜᴋꜱʜᴀɴ`,
-            '𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙻𝙾𝙳 𝙵𝚁𝙴𝙴 𝙱𝙾𝚃'
+            '𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙻𝙾𝙳 PASIYA-MD 𝙵𝚁𝙴𝙴 𝙱𝙾𝚃'
         ),
         contextInfo: {
-            mentionedJid: ['94753262213@s.whatsapp.net'],
+            mentionedJid: ['947663598693@s.whatsapp.net'],
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
@@ -1910,7 +1910,7 @@ case 'cyber_ping':
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been successfully deleted.',
-                            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
                         )
                     });
                     break;
@@ -1923,7 +1923,7 @@ case 'cyber_ping':
                 caption: formatMessage(
                     '❌ ERROR',
                     'An error occurred while processing your command. Please try again.',
-                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD  𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
                 )
             });
         }
@@ -2180,9 +2180,9 @@ async function EmpirePair(number, res) {
                     await socket.sendMessage(userJid, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            '⛩️ 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 𝐒𝐎𝐋𝐎 𝐌𝐃 🐉',
+                            '⛩️ 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉',
                             `✅ Successfully connected!\n\n🔢 Number: ${sanitizedNumber}\n\n📋`,
-                            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
                         )
                     });
 
@@ -2238,7 +2238,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 is running',
+        message: '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 is running',
         activesession: activeSockets.size
     });
 });
@@ -2390,7 +2390,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘚𝘖𝘓𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD  𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
                 )
             });
         }
