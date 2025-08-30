@@ -1,7 +1,7 @@
 {
-  "name": "Solo-md",
+  "name": "pasiya-md",
   "version": "1.0.0",
-  "description": "Solo-MD WhatsApp Bot with Multi-Number Support",
+  "description": "pasiya-MD WhatsApp Bot with Multi-Number Support",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
