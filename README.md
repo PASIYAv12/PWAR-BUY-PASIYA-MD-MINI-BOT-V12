@@ -1,1 +1,2 @@
-# PWAR-BUY-PASIYA-MD-MINI-BOT-V12
+# FREE-BOT
+Tha project solo-leveling md mini bot ⚙️
